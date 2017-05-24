@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+  <Date>2017-05-23</Date>
+  <Beta>False</Beta>
+  <Category>Cloud:</Category>
+  <Name>Ass</Name>
+  <Overview>
+    Ass
+  </Overview>
+  <Registry>https://registry.hub.docker.com/u/gamemakin/repository/</Registry>
+  <Repository>gamemakin/repository</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/docker/appdata/ass</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:8888]/</WebUI>
+
+  <Network Default="bridge">bridge</Network>
+
+  <Config Type="Port" Name="Web Port" Target="8008" Default="8080" Mode="tcp" Display="always-hide" Required="true"
+       Description="Default Port.">8080</Config>
+</Container>
