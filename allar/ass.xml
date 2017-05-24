@@ -22,17 +22,10 @@
       </Port>
     </Publish>
   </Networking>
-  <Data>
-    <Volume>
-      <HostDir>/mnt/user/docker/appdata/ass</HostDir>
-      <ContainerDir>/config</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-  </Data>
-  <WebUI>http://[IP]:[PORT:8888]/</WebUI>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
 
   <Network Default="bridge">bridge</Network>
 
-  <Config Type="Port" Name="Web Port" Target="8008" Default="8080" Mode="tcp" Display="always-hide" Required="true"
+  <Config Type="Port" Name="Web Port" Target="8080" Default="8080" Mode="tcp" Display="always-hide" Required="true"
        Description="Default Port.">8080</Config>
 </Container>
